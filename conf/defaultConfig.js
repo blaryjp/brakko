@@ -3,28 +3,22 @@ module.exports = {
     "viewports": [
         {
             "name": "mobilev",
-            "width": 320,
-            "height": 1500
+            "width": 320
         }, {
             "name": "mobileh",
-            "width": 480,
-            "height": 1500
+            "width": 480
         }, {
             "name": "tableth",
-            "width": 768,
-            "height": 1500
+            "width": 768
         }, {
             "name": "tabletv",
-            "width": 1024,
-            "height": 1500
+            "width": 1024
         }, {
             "name": "browser",
-            "width": 1200,
-            "height": 1500
+            "width": 1200
         }, {
             "name": "browserlg",
-            "width": 1600,
-            "height": 1500
+            "width": 1600
         }
     ],
     "scenarios": [],
