@@ -38,5 +38,5 @@ module.exports = {
     "casperFlags": [],
     "engine": "chrome",
     "report": ["browser", "CI"],
-    "debug": false
+    "debug": true
 }
