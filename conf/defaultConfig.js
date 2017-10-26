@@ -2,23 +2,29 @@ module.exports = {
     "id": "all",
     "viewports": [
         {
-            "name": "mobilev",
-            "width": 320
+            "name": "mobile_v",
+            "width": 320,
+            "height": 1500
         }, {
-            "name": "mobileh",
-            "width": 480
+            "name": "mobile_h",
+            "width": 480,
+            "height": 1500
         }, {
-            "name": "tableth",
-            "width": 768
+            "name": "tablet_h",
+            "width": 768,
+            "height": 1500
         }, {
-            "name": "tabletv",
-            "width": 1024
+            "name": "tablet_v",
+            "width": 1024,
+            "height": 1500
         }, {
             "name": "browser",
-            "width": 1200
+            "width": 1200,
+            "height": 1500
         }, {
-            "name": "browserlg",
-            "width": 1600
+            "name": "browser_lg",
+            "width": 1600,
+            "height": 1500
         }
     ],
     "scenarios": [],
@@ -32,5 +38,5 @@ module.exports = {
     "casperFlags": [],
     "engine": "chrome",
     "report": ["browser", "CI"],
-    "debug": true
+    "debug": false
 }
