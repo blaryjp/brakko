@@ -2,28 +2,24 @@ module.exports = {
     "id": "all",
     "viewports": [
         {
-            "name": "mobile_v",
+            "name": "mobile_v__xs",
             "width": 320,
             "height": 1500
         }, {
-            "name": "mobile_h",
-            "width": 480,
+            "name": "mobile_h__sm",
+            "width": 576,
             "height": 1500
         }, {
-            "name": "tablet_h",
+            "name": "tablet__md",
             "width": 768,
             "height": 1500
         }, {
-            "name": "tablet_v",
-            "width": 1024,
+            "name": "browser__lg",
+            "width": 992,
             "height": 1500
         }, {
-            "name": "browser",
+            "name": "browser__xl",
             "width": 1200,
-            "height": 1500
-        }, {
-            "name": "browser_lg",
-            "width": 1600,
             "height": 1500
         }
     ],
