@@ -16,6 +16,12 @@ const defaultConfig = require('./conf/defaultConfig');
 const bracco = {
 
     init(settings) {
+
+        // Map viewports
+        if (settings.viewports && Array.isArray(settings.viewports)) {
+            settings.viewports = _.filter(defaultSettings.viewports, function (v) { return ~settings.viewports.indexOf(v.name); });
+        }
+
         //setup vars (testhost, refhost, settings..)
         this.conf = Object.assign({}, defaultSettings, settings);
     },
@@ -59,7 +65,7 @@ const bracco = {
 
                         scenario.tags.map(cTag => {
                             let match = _.findIndex(tags, o => o === cTag );
-                            if (match !== -1) { 
+                            if (match !== -1) {
                                 newScenarios.push(Object.assign({}, defaultScenario, scenario));
                             }
                         });
@@ -78,15 +84,20 @@ const bracco = {
                                     });
             }
 
-            scenarios = scenarios.concat(newScenarios);  
+            scenarios = scenarios.concat(newScenarios);
         });
 
         // merge with default config of backstop
         let config = Object.assign({}, defaultConfig);
 
+        // Overrides viewports
+        if (this.conf.viewports) {
+            config.viewports = this.conf.viewports;
+        }
+
         // add scenario to config
         config.scenarios = config.scenarios.concat(scenarios);
-        
+
         // write config in dafault backstop json
         let jsonFile = root + '/backstop.json';
         jsonfile.writeFileSync(jsonFile, config);

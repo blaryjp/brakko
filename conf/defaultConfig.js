@@ -1,28 +1,8 @@
+const conf = require('./commonSettings');
+
 module.exports = {
     "id": "all",
-    "viewports": [
-        {
-            "name": "mobile_v__xs",
-            "width": 320,
-            "height": 1500
-        }, {
-            "name": "mobile_h__sm",
-            "width": 576,
-            "height": 1500
-        }, {
-            "name": "tablet__md",
-            "width": 768,
-            "height": 1500
-        }, {
-            "name": "browser__lg",
-            "width": 992,
-            "height": 1500
-        }, {
-            "name": "browser__xl",
-            "width": 1200,
-            "height": 1500
-        }
-    ],
+    "viewports": conf.viewports,
     "scenarios": [],
     "paths": {
         "bitmaps_reference": "backstop_data/bitmaps_reference",
