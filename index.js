@@ -91,8 +91,8 @@ const bracco = {
         let config = Object.assign({}, defaultConfig);
 
         // Overrides viewports
-        if (this.conf.viewports) {
-            config.viewports = this.conf.viewports;
+        if (conf.viewports) {
+            config.viewports = conf.viewports;
         }
 
         // add scenario to config
